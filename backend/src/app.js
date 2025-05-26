@@ -26,18 +26,17 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors());
+// ✅ safer CORS setup
+app.use(cors({ origin: 'http://localhost:5173' }));
 app.use(express.json());
 
 app.use("/ai", aiRoutes);
 
-// Updated path: only one '..' because frontend is inside backend
+// ✅ serve static files from Vite build (dist folder)
 app.use(express.static(path.join(__dirname, '..', 'frontend', 'vite-project', 'dist')));
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'frontend', 'vite-project', 'dist', 'index.html'));
 });
-
-module.exports = app;
 
 module.exports = app;
