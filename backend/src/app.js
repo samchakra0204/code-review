@@ -1,4 +1,4 @@
-/*const express = require('express');
+const express = require('express');
 const path = require('path');
 const aiRoutes = require('./routes/ai.routes.js');
 const cors = require('cors');
@@ -17,9 +17,9 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, '..', '..', 'frontend', 'vite-project', 'dist', 'index.html'));
 });
 
-module.exports = app;*/
+module.exports = app;
 
-const express = require('express');
+/*const express = require('express');
 const cors = require('cors');
 
 const aiRoutes = require('./routes/ai.routes.js');
@@ -35,4 +35,4 @@ app.get("/", (req, res) => {
     res.send("Backend is running on Railway!");
 });
 
-module.exports = app;
+module.exports = app;*/
