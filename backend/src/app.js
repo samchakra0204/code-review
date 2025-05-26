@@ -32,7 +32,7 @@ app.use(express.json());
 
 app.use("/ai", aiRoutes);
 
-// ✅ serve static files from Vite build (dist folder)
+// ✅ no change needed if it's now inside backend/frontend/vite-project
 app.use(express.static(path.join(__dirname, '..', 'frontend', 'vite-project', 'dist')));
 
 app.get("/", (req, res) => {
